@@ -6,12 +6,11 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 19:49:36 by adel              #+#    #+#             */
-/*   Updated: 2023/12/28 19:55:20 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/19 22:04:03 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {
@@ -24,6 +23,7 @@ void	ft_striter(char *s, void (*f)(char *))
 	}
 
 }
+/*
 #include<ctype.h>
 
 int main()
@@ -31,4 +31,4 @@ int main()
 	char art[] = "Artur";
 	printf("%s",ft_striter(art,toupper));
 }
-
+*/

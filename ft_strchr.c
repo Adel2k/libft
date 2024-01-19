@@ -1,6 +1,17 @@
-#include<stdio.h>
-#include<unistd.h>
-#include<string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/19 21:56:18 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/19 21:57:36 by aeminian         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 /*char	*ft_strchr(char *str, int c)
 {
 	int i;
@@ -35,6 +46,7 @@ char *ft_strchr( char *str, int c)
 	}
     return NULL;
 }
+/*
 int main()
 {
 	char str[] = "hello wolrd.";
@@ -42,4 +54,4 @@ int main()
 //	printf("%s\n", strchr(str, 'i'));
 }
 
-
+*/

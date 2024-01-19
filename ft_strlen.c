@@ -1,10 +1,19 @@
-#include<stdio.h>
-#include<unistd.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/19 22:04:16 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/19 22:05:09 by aeminian         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
-
 	int i;
 
 	i = 0;
@@ -12,9 +21,10 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
+/*
 int main ()
 {
 	char str[] = "adel";
 	printf("%d\n",ft_strlen(str));
 }
-
+*/

@@ -1,4 +1,17 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/19 21:55:20 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/19 21:55:55 by aeminian         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 char *ft_strcat(char *dest, char *src)
 {
 	int i;
@@ -17,7 +30,7 @@ char *ft_strcat(char *dest, char *src)
 	dest[i] = 0;
 	return (dest);
 }
-
+/*
 
 #include <stdio.h>
 #include <string.h>

@@ -6,19 +6,20 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:40:32 by adel              #+#    #+#             */
-/*   Updated: 2024/01/19 20:05:53 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/19 20:48:26 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HEADER_S
 # define HEADER_S
 #include <stdlib.h>
+#include <stdio.h>
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
-void	ft_memmove(void *dest, const void *src, size_t n);
+//void	ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memchr(const void *str, int c, size_t n);
+//void	*ft_memchr(const void *str, int c, size_t n);
 void	ft_putchar(char c);
 void	ft_putnbr(char c);
 int	ft_atoi(char *str);

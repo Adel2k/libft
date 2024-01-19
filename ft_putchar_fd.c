@@ -6,18 +6,19 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 22:14:03 by adel              #+#    #+#             */
-/*   Updated: 2023/12/27 22:20:49 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/19 21:49:55 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+/*
 int main ()
 {
 	char s= 'a';
 	ft_putchar_fd(s, 0);
-}
+}*/

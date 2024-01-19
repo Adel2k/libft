@@ -6,12 +6,11 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:58:27 by adel              #+#    #+#             */
-/*   Updated: 2023/12/27 16:45:33 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/19 21:41:30 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -22,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 int main ()
 {
 	const char src [] = "adel barev";
@@ -32,4 +31,4 @@ int main ()
 	printf("After memcpy dest = %s\n", dest);
    
    return(0);
-}
+}*/

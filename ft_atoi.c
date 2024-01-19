@@ -1,5 +1,16 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/19 20:39:19 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/19 21:17:02 by aeminian         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {
@@ -27,11 +38,12 @@ int	ft_atoi(char *str)
 			numb = numb * 10 + str[i] - '0';
 			i++;
 		}
-		return (numb * sign);
 	}
+	return (numb * sign);
 }
+/*
 int main ()
 {
 	char str[] = "    	---23ad34";
 	printf("%d\n", ft_atoi(str));
-}
+}*/

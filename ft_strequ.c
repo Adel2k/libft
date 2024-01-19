@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 19:52:33 by adel              #+#    #+#             */
-/*   Updated: 2023/12/27 21:17:06 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/19 22:03:33 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,10 @@ int	ft_strequ(char const *s1, char const *s)
 		return (0);
 
 }
+/*
 int main ()
 {
 	char s1[] = "0";
 	char s2[] = "01";
 	printf("%d", ft_strequ(s1 , s2));
-}
+}*/

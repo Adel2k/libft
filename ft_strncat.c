@@ -1,4 +1,16 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/19 22:06:01 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/19 22:06:18 by aeminian         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strncat(char *src, char *dest, unsigned int n)
 {
@@ -20,6 +32,7 @@ char	*ft_strncat(char *src, char *dest, unsigned int n)
 	src[i] = 0;
 	return (src);
 }
+/*
 #include <string.h>
 #include <stdio.h>
 int main ()
@@ -28,4 +41,4 @@ int main ()
 	char str1[] = "barev";
 	printf("%s\n", ft_strncat(str, str1, 3));
 	//printf("%s\n", strncat(str, str1, 3));
-}
+}*/

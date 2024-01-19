@@ -6,12 +6,11 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 16:47:05 by adel              #+#    #+#             */
-/*   Updated: 2024/01/16 18:47:52 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/19 21:22:39 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
@@ -24,10 +23,11 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		i++;
 	}
 }
+/*
 int main()
 {
 	char src[] = "barev adel.ajsh";
 	char dest[50] = "";
 	ft_memccpy(dest, src, 'd', 10);
 	printf("%s\n", dest);
-}
+}*/
