@@ -6,11 +6,11 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 21:22:15 by adel              #+#    #+#             */
-/*   Updated: 2023/12/27 21:44:50 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/19 22:53:09 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
@@ -36,9 +36,10 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 	else 
 		return (0);
 }
+/*
 int main ()
 {
 	char s1[] = "";
 	char s2[] = "";
 	printf ("%d",ft_strnequ(s1, s2, 7));
-}
+}*/

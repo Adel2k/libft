@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 21:56:18 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/19 21:57:36 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:13:47 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@
 	return (str);
 }
 */
-char *ft_strchr( char *str, int c)
+char *ft_strchr(const char *str,const int c)
 {
         int i;
 

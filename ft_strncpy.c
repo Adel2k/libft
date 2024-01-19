@@ -1,4 +1,16 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/19 22:51:28 by adel              #+#    #+#             */
+/*   Updated: 2024/01/19 22:52:01 by adel             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 char	*ft_strncpy(char *str, char *str1, unsigned int n)
 {
 	int i;
@@ -14,6 +26,7 @@ char	*ft_strncpy(char *str, char *str1, unsigned int n)
 	}
 	return (str);
 }
+/*
 #include <string.h>
 #include <stdio.h>
 int main()
@@ -23,4 +36,4 @@ int main()
 	printf("%s\n", ft_strncpy(str,str1, 2));
 //	printf("%s\n", strncpy(str, str1, 2));
 }
-
+*/

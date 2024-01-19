@@ -1,6 +1,16 @@
-#include <unistd.h>
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/19 23:00:20 by adel              #+#    #+#             */
+/*   Updated: 2024/01/19 23:00:56 by adel             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 /*char	*ft_strstr(char *src, char *dest)
 {
 	int i;
@@ -48,10 +58,11 @@ char	*ft_strstr(char *src, char *dest)
 	}
 
 }
+/*
 int main ()
 {
 	char str[] = "barev adel";
 	char str1[] = "re";
 	printf("%s\n", ft_strstr(str, str1));
 //	printf("%s\n", strstr(str, str1));
-}
+}*/
