@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 21:55:20 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/19 21:55:55 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/20 00:52:22 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,4 @@ int main ()
 	char str1[] = "barrrrrev";
 	printf("%s\n", ft_strcat(str, str1));
 //	printf("%s\n", strcat(str, str1));
-}
+}*/

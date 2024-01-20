@@ -6,11 +6,12 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 21:50:38 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/19 21:53:16 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/20 00:50:31 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include ""
+#include "libft.h"
+
 void	ft_putchar(char c)
 {
 	write (1, &c, 1);

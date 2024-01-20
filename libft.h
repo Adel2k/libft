@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:40:32 by adel              #+#    #+#             */
-/*   Updated: 2024/01/19 23:17:23 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/20 00:51:50 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 //void	*ft_memchr(const void *str, int c, size_t n);
 void	ft_putchar(char c);
-void	ft_putnbr(char c);
+void	ft_putnbr(int n);
 int	ft_atoi(char *str);
 int	ft_isalpha(int i);
 int	ft_isdigit(int i);

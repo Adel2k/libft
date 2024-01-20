@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 21:22:15 by adel              #+#    #+#             */
-/*   Updated: 2024/01/19 22:53:09 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/20 00:59:08 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 		return (1);
 	else if (s1 == 0 || s2 == 0)
 		return (0);
-	while (s1 && s2 && n >= i)
+	while (s1 && s2 && (int)n >= i)
 	{
 		if (s1[i] == s2[i])
 			flag = 1;

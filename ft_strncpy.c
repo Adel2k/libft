@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 22:51:28 by adel              #+#    #+#             */
-/*   Updated: 2024/01/19 22:52:01 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/20 00:57:46 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strncpy(char *str, char *str1, unsigned int n)
 
 	j = 0;
 	i = 0;
-	while (str1[i] && str[j] && n > i)
+	while (str1[i] && str[j] && (int)n > i)
 	{
 		str[j] = str1[i];
 		i++;
