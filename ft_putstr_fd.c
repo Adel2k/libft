@@ -6,21 +6,12 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 22:21:53 by adel              #+#    #+#             */
-/*   Updated: 2024/01/19 23:16:48 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/20 16:19:04 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen (const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 void	ft_putstr_fd(const char *s, int fd)
 {
 	write (fd, &s, ft_strlen(s));

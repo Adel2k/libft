@@ -6,7 +6,7 @@
 /*   By: adel <adelineeminian13@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 01:14:43 by adel              #+#    #+#             */
-/*   Updated: 2024/01/19 23:10:50 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/20 18:30:47 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,22 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	while (n-- != 0)
-		*(unsigned char *) s++= (unsigned char) c;
+	unsigned char	*str;
+
+	str = (unsigned char *)s;
+	while (n != 0)
+	{
+		*str++ = (unsigned char)c;
+		n--;
+	}
 	return (s);
 }
-/*int	main()
+/*
+int	main()
 {
-	char str[10];
-	ft_memset (str, '*', 5);
-	ft_memset (str+5, '-', 5);
-	printf("%s\n", str);
+	char *str = malloc(sizeof(char) * 10);
+	
+	str[9] = 0;
+	ft_memset (str, 'a', 4);
+	printf("%s\n", (char *)str);
 }*/

@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 23:00:20 by adel              #+#    #+#             */
-/*   Updated: 2024/01/20 08:50:33 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/20 15:22:13 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ char	*ft_strstr(char *src, char *dest)
 {
 	int	i;
 	int	j;
-	int	flag;
 
 	j = 0;
 	i = 0;
@@ -53,8 +52,7 @@ char	*ft_strstr(char *src, char *dest)
 			j++;
 		i++;
 	}
-	if (dest[j] == 0)
-		return ((char *)&src[i]);
+	return ((char *)&src[i]);
 }
 /*
 int main ()
