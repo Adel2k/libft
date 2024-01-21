@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 15:58:27 by adel              #+#    #+#             */
-/*   Updated: 2024/01/20 21:45:39 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/21 18:59:54 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char *dest_p;
-	unsigned char *src_p;
-	
+	unsigned char	*dest_p;
+	unsigned char	*src_p;
+
 	src_p = (unsigned char *)src;
 	dest_p = (unsigned char *)dest;
 	if (dest == 0 && src == 0)
@@ -28,7 +28,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
 /*int main ()
 {
 	char buff1[22];

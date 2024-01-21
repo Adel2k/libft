@@ -6,19 +6,20 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 21:18:54 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/19 21:19:15 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/21 20:17:55 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int i)
+int	ft_isalpha(int i)
 {
-	if ((i >= 'a' && i <= 'z')||(i >= 'A' && i <= 'Z'))
+	if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z'))
 		return (1024);
 	return (0);
 }
+/*
 int main ()
 {
 	printf("%d\n",ft_isalpha('A'));
-}
+}*/
