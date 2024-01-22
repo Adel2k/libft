@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:40:32 by adel              #+#    #+#             */
-/*   Updated: 2024/01/21 19:05:07 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/22 09:35:16 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-
+#include <string.h>
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
