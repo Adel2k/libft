@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 09:29:36 by adel              #+#    #+#             */
-/*   Updated: 2024/01/22 10:30:51 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/22 15:47:27 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	int	i;
 
 	i = 0;
-	while(src[i] && sizeof(src) >= i)
+	while(src[i] && (int)size - 1  >= i)
 	{
 		dst[i] = src[i];
 		i++;
