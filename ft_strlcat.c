@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 17:40:39 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/23 20:06:16 by aeminian         ###   ########.fr       */
+/*   Created: 2024/01/23 15:48:52 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/23 18:58:11 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
 {
-	unsigned char	*str1;
-	unsigned char	*str2;
+	char	*d;
+	char	*s;
+	int		i;
+	int 	j;
 
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
-	while (n--)
+	i = 0;
+	j = 0;
+	s = (char *)src;
+	d = (char *)dst;
+	while ((s[i] || d[j]) && dstsize)
 	{
-		if (*str1 == *str2)
-		{
-			str1++;
-			str2++;
-		}
-		else
-			return (*str1 - *str2);
+		
+		
+		i++;
 	}
-	return (0);
+	return (1);
 }
 /*
 int main ()
 {
-	char *s1 = "\xff\xaa\xde\x12";
-	char *s2 = "\xff\xaa\xde\x12MACOSAAAAA";
-	size_t size = 4;
-//	printf("%d\n", memcmp(s1, s2, size));
-	printf("%d\n", ft_memcmp(s1, s2, size));}*/
+	char s[] = "aaaaaaa";
+	char s1[] = "bbb";
+	size_t result;
+
+	result = (strlcat(s, s1,3));
+	printf("%zu" , result);
+}*/

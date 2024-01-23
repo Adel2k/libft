@@ -6,13 +6,13 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 22:04:16 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/20 16:03:43 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/23 19:22:13 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int i;
 

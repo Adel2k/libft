@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:40:32 by adel              #+#    #+#             */
-/*   Updated: 2024/01/22 22:13:56 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/23 19:22:42 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
-
+size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -33,7 +33,7 @@ int		ft_isdigit(int i);
 int		ft_isalnum(int i);
 int		ft_isascii(int i);
 int		ft_isprint(int i);
-int		ft_strlen(const char *s);
+size_t		ft_strlen(const char *s);
 void	ft_bzero(void *s, size_t n);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
