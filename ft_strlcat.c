@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:48:52 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/24 09:37:52 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/24 15:19:57 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize
 	int 	j;
 
 	i = 0;
-	while (dst && dst[i] && i < dstsize)
+	while (dst && dst[i] && i < (int)dstsize)
 		i++;
 	j = 0;
-	while (src && src[i] && (i + j + 1 < dstsize))
+	while (src && src[i] && (i + j + 1 < (int)dstsize))
 	{
 		dst[i + j] = src[j];
 		j++;

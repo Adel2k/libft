@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:40:32 by adel              #+#    #+#             */
-/*   Updated: 2024/01/24 09:52:29 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/24 21:31:09 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <unistd.h>
 #include <string.h>
 
+char	* ft_strnstr(const char *haystack, const char *needle, size_t len);
+void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s);
 size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);

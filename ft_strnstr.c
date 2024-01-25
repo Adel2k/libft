@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 21:56:18 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/24 21:51:42 by aeminian         ###   ########.fr       */
+/*   Created: 2024/01/24 21:26:52 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/24 21:58:12 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *str,const int c)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    char	*ptr;
+	int	i;
+	int j;
 
-	ptr = (char *)str;
-
-    while (1)
+	i = 0;
+	j = 0;
+	if (!haystack && !len)
+		return (NULL);
+	while (haystack[i] && i <= len)
 	{
-		if (*ptr == (unsigned char)c)
-			return (ptr);
-		if (*ptr == '\0')
-			break ;
-		ptr++;
+		while( needle[j] && haystack[i] == needle[j])
+		{
+			i++;
+			j++;
+		}
+		return ((char *)haystack);
 	}
-    return (NULL);
+	return (NULL);
 }
-/*
-int main()
+int main ()
 {
-	char str[] = "hello wolrd.";
-	printf("%s\n", ft_strchr(str, '\n'));
-//	printf("%s\n", strchr(str, 'i'));
+	char str[] = "hello ad jan";
+	char str1[] = "ad";
+	printf("%s", ft_strnstr(str, str1, 10));
 }
-*/
