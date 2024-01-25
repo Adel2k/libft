@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/23 15:48:52 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/25 13:52:00 by aeminian         ###   ########.fr       */
+/*   Created: 2024/01/25 15:58:53 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/25 17:38:18 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int 	j;
+	char	*memory;
+	char	*result;
+	size_t	size;
 
-	i = 0;
-	while (dst && dst[i] && i < (int)dstsize)
-		i++;
-	j = 0;
-	while (src && src[i] && (i + j + 1 < (int)dstsize))
-	{
-		dst[i + j] = src[j];
-		j++;
-	}
-	dst[i + j] = 0;
-	return (i + strlen(src));
+	if (!s1 || !s2)
+		return (NULL);
+	size = ft_strlen(s1) + ft_strlen(s2);
+	memory = (char *)malloc(size +1);
+	if (!memory)
+		return (NULL);
+	*(memory + size) = 0;
+	result = memory;
+	while (s1 && *s1)
+		*memory++ = *s1++;
+	while (*s2)
+		*memory++ = *s2++;
+	return (result);
 }
 /*
 int main ()
 {
-	char s[] = "<dkjkfj";
-	char *s1;
-	size_t result;
-
-	result = (ft_strlcat(s, s1,3));
-	printf("%zu" , result);
+    char *s1;
+    char s2[] = "world";
+    printf("%s", ft_strjoin(s1, s2));
 }*/

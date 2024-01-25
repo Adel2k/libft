@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 21:26:52 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/25 13:53:36 by aeminian         ###   ########.fr       */
+/*   Created: 2024/01/25 13:56:44 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/25 20:11:21 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
+	char	*ptr;
 
-	str = (char *)haystack;
-	if (!str && !len)
+	if (!s)
 		return (NULL);
-	while (*str && len--)
-	{
-		while (*needle != 0)
-		{
-			if(*str == *needle)
-				needle++;
-			else
-				return (NULL);
-			str++;
-		}
-		return (str);
-	}
-	return (NULL);
+	else if ((start >= ft_strlen(s)) || len < 0)
+		len = 0;
+	else if (len > (ft_strlen(s) - start))
+		len = ft_strlen(s) - start;
+	str = (char *)malloc(len + 1);
+	if (!str)
+		return (NULL);
+	s += start;
+	ptr = str;
+	*(str + len) = '\0';
+	while (len-- && *s)
+		*str++ = *s++;
+	return (ptr);
 }
 /*
 int main ()
 {
-	char *s1 = "see FF your FF return FF now FF";
-	char *s2 = "FF";	
-	printf("%s", ft_strnstr(s1, s2, 10));
+	char str[] = "hello world";
+	printf("%s", ft_substr(str, 3, 10));
 }*/

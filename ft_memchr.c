@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:45:21 by adel              #+#    #+#             */
-/*   Updated: 2024/01/23 19:51:23 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/25 13:07:27 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 int main()
 {
 	const char s[] = "adel ? ka";
-	const char ch = '1';
+	const char ch = '?';
 	char *ret = ft_memchr(s, ch , 9);
 	printf("%s", ret);
 }
+
 int main () {
    const char str[] = "http://www.tutorialspoint.com";
    const char ch = '.';

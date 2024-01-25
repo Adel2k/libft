@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 22:21:53 by adel              #+#    #+#             */
-/*   Updated: 2024/01/20 16:19:04 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:13:32 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_putstr_fd(const char *s, int fd)
 {
-	write (fd, &s, ft_strlen(s));
+	if (s)
+		write (fd, &s, ft_strlen(s));
 }
 /*
 int main ()
