@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:40:32 by adel              #+#    #+#             */
-/*   Updated: 2024/01/25 17:41:06 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/26 20:11:23 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,15 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(const char *s, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+////////////////////////////////////////////////////////////////////
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+} t_list;
+
+
+t_list 	*ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif

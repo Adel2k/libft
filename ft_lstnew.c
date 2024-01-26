@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 13:56:44 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/26 21:15:09 by aeminian         ###   ########.fr       */
+/*   Created: 2024/01/26 16:06:34 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/26 16:42:49 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list *ft_lstnew(void *content)
 {
-	char	*str;
-	char	*ptr;
+	t_list	*ptr;
 
-	if (!s)
+	ptr = (t_list*)malloc(sizeof(t_list));
+	if (!ptr)
 		return (NULL);
-	else if ((start >= ft_strlen(s)) || len < 0)
-		len = 0;
-	else if (len > (ft_strlen(s) - start))
-		len = ft_strlen(s) - start;
-	str = (char *)malloc(len + 1);
-	if (!str)
-		return (NULL);
-	s += start;
-	ptr = str;
-	*(str + len) = '\0';
-	while (len-- && *s)
-		*str++ = *s++;
+	ptr -> content = content;
+	ptr -> next = (NULL);
 	return (ptr);
-}
-/*
+}/*
 int main ()
 {
-	char str[] = "hello world";
-	printf("%s", ft_substr(str, 3, 10));
+	char a[] = "aaaaaaa";
+	printf("%s", ft_lstnew(a)->content);
 }*/
