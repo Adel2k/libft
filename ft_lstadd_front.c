@@ -6,20 +6,19 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 17:12:42 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/26 19:53:37 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/27 00:56:57 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*t;
-
-	if (!lst)
-
-	t->next = lst;
-	lst->next = new;
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
+/*
 int main ()
 {
 	t_list test;
@@ -30,4 +29,4 @@ int main ()
 	test2.int = 5;
 	ft_lstadd_front(&test, test2);
 	printf("d\n", test->int );
-}
+}*/

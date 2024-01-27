@@ -21,6 +21,10 @@ CFLAGS			= -Wall -Wextra -Werror -Iinclude
 
 all:			$(NAME)	
 
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
+
 $(NAME) :		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 

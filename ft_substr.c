@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 13:56:44 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/26 21:15:09 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/27 00:22:53 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	else if ((start >= ft_strlen(s)) || len < 0)
+	else if ((start >= ft_strlen(s)))
 		len = 0;
 	else if (len > (ft_strlen(s) - start))
 		len = ft_strlen(s) - start;
