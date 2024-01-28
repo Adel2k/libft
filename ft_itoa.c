@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 16:13:36 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/27 21:09:18 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/28 14:49:09 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static long	ft_sign(long n)
 	return (nb);
 }
 
-char	*str_new(size_t n)
+static char	*str_new(size_t n)
 {
 	char	*memory;
 
