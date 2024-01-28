@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:40:32 by adel              #+#    #+#             */
-/*   Updated: 2024/01/28 12:49:59 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/28 16:18:10 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <unistd.h>
 #include <string.h>
 
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char 	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strtrim(char const *s1, char const *set);
