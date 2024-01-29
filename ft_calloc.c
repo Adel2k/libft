@@ -6,13 +6,13 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 15:48:16 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/24 21:26:36 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:47:47 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc (size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	const char	*str;
 	size_t		s;

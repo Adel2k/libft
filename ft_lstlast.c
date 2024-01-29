@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 21:18:08 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/29 15:49:39 by aeminian         ###   ########.fr       */
+/*   Created: 2024/01/29 21:10:44 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/29 21:19:04 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int i)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if ((i >= 'a' && i <= 'z') || (i >= '0' && i <= '9')
-		|| (i >= 'A' && i <= 'Z'))
-		return (8);
-	return (0);
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
-/*
-int main ()
-{
-	printf("%d\n", ft_isalnum(' '));
-}*/

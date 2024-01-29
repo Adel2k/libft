@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 21:18:08 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/29 15:49:39 by aeminian         ###   ########.fr       */
+/*   Created: 2024/01/29 15:53:28 by aeminian          #+#    #+#             */
+/*   Updated: 2024/01/29 18:22:58 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int i)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if ((i >= 'a' && i <= 'z') || (i >= '0' && i <= '9')
-		|| (i >= 'A' && i <= 'Z'))
-		return (8);
-	return (0);
-}
-/*
-int main ()
-{
-	printf("%d\n", ft_isalnum(' '));
-}*/
+	long	num;
+
+	num = n;
+	if (num == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (num < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-num, fd);
+	}
+	else if (num > 9)
+	{
+		ft_putnbr_fd(num / 10, fd);
+		ft_putnbr_fd(num % 10, fd);
+	}
+
+	else if (num >= 0 && num <= 9)
+		ft_putchar_fd((num + '0'), fd);
+	}

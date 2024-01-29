@@ -6,17 +6,17 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 23:01:22 by adel              #+#    #+#             */
-/*   Updated: 2024/01/19 23:12:55 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/29 15:42:31 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;
-       	return (c);
+	return (c);
 }
 /*
 int main ()

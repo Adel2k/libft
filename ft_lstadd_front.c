@@ -6,12 +6,13 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 17:12:42 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/27 00:56:57 by adel             ###   ########.fr       */
+/*   Updated: 2024/01/29 21:40:58 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_lstadd_front(t_list **lst, t_list *new)
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
 		return ;

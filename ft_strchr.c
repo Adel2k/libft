@@ -6,19 +6,18 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 21:56:18 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/25 20:09:32 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:47:03 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *str,const int c)
+char	*ft_strchr(const char *str, const int c)
 {
-    char	*ptr;
+	char	*ptr;
 
 	ptr = (char *)str;
-
-    while (1)
+	while (1)
 	{
 		if (*ptr == (unsigned char)c)
 			return (ptr);
@@ -26,7 +25,7 @@ char *ft_strchr(const char *str,const int c)
 			break ;
 		ptr++;
 	}
-    return (NULL);
+	return (NULL);
 }
 /*
 int main()

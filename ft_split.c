@@ -6,21 +6,11 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 12:50:13 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/28 16:05:43 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/29 20:32:21 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char	*str_new(size_t n)
-{
-	char	*memory;
-
-	memory = (char *)malloc(n + 1);
-	if (!memory)
-		return (NULL);
-	return (memory);
-}
 
 static size_t	word_count(const char *s, char c)
 {
@@ -36,6 +26,8 @@ static size_t	word_count(const char *s, char c)
 			count++;
 			while (s[i] && s[i] != c)
 				i++;
+			if (s[i] == 0)
+				break ;
 		}
 		else if (s[i] == c)
 			i++;
@@ -45,44 +37,43 @@ static size_t	word_count(const char *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
+	char	**memory;
+	size_t	len;
 	int		j;
-	char	*result;
-	char	*memory;
-	size_t	word;
-	char **res;
+	int		i;
 
-	j = 0;
 	i = 0;
-	while (s && s[i] && c)
+	j = 0;
+	if (!s)
+		return (NULL);
+	len = word_count(s, c);
+	if (s && *s && c)
 	{
-		while (s && s[i] && s[i] != c)
-			i++;
-		if (c == s[i])
-		{
-			memory = ft_substr(s, j , i - j);
-			if (!memory )
-				return (NULL);
-			i++;
-			j = i;
-		}
-		word = word_count(s, c);
-		while (memory)
-		{
-			result = str_new(word);
-			*(word + result) = 0;
-		}
-		result = memory;
-		res = &result;
+		memory = (char **)malloc(sizeof(char *) * len + 1);
+		if (!memory)
+			return (NULL);
 	}
-	return (res);
-
+	while (s[i] != 0)
+	{
+		while (s[i] != c && s[i] != 0)
+			i++;
+		while (s[i] == c && i <= (int)ft_strlen(s))
+		{
+			*memory = ft_substr(s, i, i - j);
+			memory++;
+			j = i;
+			i++;
+		}
+	}
+	*(memory + len) = 0;
+	return (memory);
 }
 /*
 int main ()
 {
-	char **result;
-	char str[] = "hello world";
-	result = ft_split(str, ' ');
-	printf("%s", *result);
+	char	**word;
+	char str[] = "hello world jhdfj jhdejw ";
+
+	word = ft_split(str, ' ');
+	printf("first word = %s\n", *word);
 }*/

@@ -6,19 +6,20 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:40:32 by adel              #+#    #+#             */
-/*   Updated: 2024/01/28 16:18:10 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/29 21:43:31 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_S
-# define HEADER_S
+#ifndef LIBFT_H
+# define LIBFT_H
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char 	**ft_split(char const *s, char c);
+void	ft_putendl_fd(char *s, int fd);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -50,15 +51,19 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(const char *s, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+void	ft_putnbr_fd(int n, int fd);
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
 ////////////////////////////////////////////////////////////////////
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
-
-t_list 	*ft_lstnew(void *content);
-void ft_lstadd_front(t_list **lst, t_list *new);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif
