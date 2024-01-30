@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:48:52 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/25 13:52:00 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/30 20:43:46 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,35 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
-	int 	j;
+	size_t	len_dest;
+	size_t	len_src;
+	int		i;
 
 	i = 0;
-	while (dst && dst[i] && i < (int)dstsize)
-		i++;
-	j = 0;
-	while (src && src[i] && (i + j + 1 < (int)dstsize))
+	len_dest = ft_strlen(dst);
+	len_src = ft_strlen(src);
+	if (dstsize == 0)
+		return (len_src);
+	if (len_dest >= dstsize)
+		return (dstsize + len_src);
+	while (src[i] && (len_dest + i < dstsize - 1))
 	{
-		dst[i + j] = src[j];
-		j++;
+		dst[len_dest + i] = src[i];
+		i++;
 	}
-	dst[i + j] = 0;
-	return (i + strlen(src));
+	dst[len_dest + i] = 0;
+	if (len_dest + i < dstsize)
+		return (len_dest + len_src);
+	return (dstsize + len_src);
 }
 /*
 int main ()
 {
-	char s[] = "<dkjkfj";
-	char *s1;
-	size_t result;
+	char	*dest;
+	int		arg;
 
-	result = (ft_strlcat(s, s1,3));
-	printf("%zu" , result);
+	dest[11] = 'a';
+	printf("%lu",ft_strlcat(dest, "lorem", 15));
+	write(1, "\n", 1);
+	write(1, dest, 15);
 }*/

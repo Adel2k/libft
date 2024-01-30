@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:53:28 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/29 18:22:58 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/30 20:53:19 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(num / 10, fd);
 		ft_putnbr_fd(num % 10, fd);
 	}
-
 	else if (num >= 0 && num <= 9)
 		ft_putchar_fd((num + '0'), fd);
-	}
+}

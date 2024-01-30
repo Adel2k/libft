@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 00:41:40 by adel              #+#    #+#             */
-/*   Updated: 2024/01/22 20:12:49 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/30 21:02:50 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (dest);
 	}
 }
-/*int main()
+
+int main()
 {
-	char src[] = "abcdefgh";
-	printf("%s\n",ft_memmove(src +4, src, sizeof(src)));
-}*/	
+	char	src[] = "lorem ipsum dolor sit amet";
+	char	*dest;
+
+	write(1, "dest's adress was not returned\n", 31);
+	write(1, dest, 22);
+}

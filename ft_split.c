@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 12:50:13 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/29 20:32:21 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/30 15:23:08 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ static size_t	word_count(const char *s, char c)
 		{
 			count++;
 			while (s[i] && s[i] != c)
+			{
 				i++;
-			if (s[i] == 0)
-				break ;
+				if (s[i] == 0)
+					break ;
+			}
 		}
 		else if (s[i] == c)
 			i++;
@@ -43,7 +45,6 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	i = 0;
-	j = 0;
 	if (!s)
 		return (NULL);
 	len = word_count(s, c);
@@ -55,15 +56,20 @@ char	**ft_split(char const *s, char c)
 	}
 	while (s[i] != 0)
 	{
-		while (s[i] != c && s[i] != 0)
-			i++;
-		while (s[i] == c && i <= (int)ft_strlen(s))
+		if (s[i] != c)
 		{
-			*memory = ft_substr(s, i, i - j);
-			memory++;
 			j = i;
-			i++;
+			while (s[i] != c && s[i] != 0)
+				i++;
+			if (s[i] == c && i <= (int)ft_strlen(s))
+			{
+				*memory = ft_substr(s, j, i - j);
+				memory++;
+				i++;
+			}
 		}
+		else
+			i++;
 	}
 	*(memory + len) = 0;
 	return (memory);
@@ -76,4 +82,5 @@ int main ()
 
 	word = ft_split(str, ' ');
 	printf("first word = %s\n", *word);
-}*/
+}
+*/
