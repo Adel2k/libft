@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 00:41:40 by adel              #+#    #+#             */
-/*   Updated: 2024/01/30 21:02:50 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/30 23:44:49 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,33 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	char	*ptr;
+
+	if (!dest && !src)
+		return (dest);
+	ptr = (char *)dest;
 	if ((unsigned char *)dest == (unsigned char *)src)
 		return (dest);
 	if ((unsigned char *)dest > (unsigned char *)src)
 	{
-		while (n != 0)
-		{
-			((unsigned char *)dest)[n -1] = ((unsigned char *)src)[n - 1];
-			n--;
-		}
-		return (dest);
+		while (n--)
+			((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
 	}
 	else
 	{
-		while (n != 0)
-		{
+		while (n--)
 			*(unsigned char *)dest++ = *(unsigned char *)src++;
-			n--;
-		}
-		return (dest);
 	}
+	return (ptr);
 }
-
+/*
 int main()
 {
 	char	src[] = "lorem ipsum dolor sit amet";
 	char	*dest;
 
-	write(1, "dest's adress was not returned\n", 31);
+	if (src != ft_memmove(src, dest, 8))
+		write(1, "dest's adress was not returned\n", 31);
 	write(1, dest, 22);
-}
+
+}*/

@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:30:07 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/29 15:36:10 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/31 00:30:53 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (s && *s)
+	if (s)
 	{
 		write (fd, s, ft_strlen(s));
 		write (fd, "\n", 1);

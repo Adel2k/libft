@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 21:26:52 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/25 13:53:36 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/02/01 23:49:45 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,31 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*str;
+	int	i;
 
 	str = (char *)haystack;
+	i = 0;
 	if (!str && !len)
 		return (NULL);
+	if (!needle[i])
+		return (str);
 	while (*str && len--)
 	{
-		while (*needle != 0)
+		i = 0;
+		while (needle[i]&& (*str == needle[i]) && len--)
 		{
-			if(*str == *needle)
-				needle++;
-			else
-				return (NULL);
-			str++;
+			if (!needle[i + 1])
+				return (str);
+			i++;
 		}
-		return (str);
+		str++;
 	}
 	return (NULL);
 }
 /*
 int main ()
 {
-	char *s1 = "see FF your FF return FF now FF";
-	char *s2 = "FF";	
-	printf("%s", ft_strnstr(s1, s2, 10));
+//	char *s1 = "see FF your FF return FF now FF";
+//	char *s2 = "FF";	
+	printf("%s",ft_strnstr("ipsum lorem ipsumm dolor sit amet", "ipsumm", 30));
 }*/

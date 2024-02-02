@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 12:50:13 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/30 15:23:08 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/02/02 00:36:30 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ char	**ft_split(char const *s, char c)
 	len = word_count(s, c);
 	if (s && *s && c)
 	{
-		memory = (char **)malloc(sizeof(char *) * len + 1);
+		memory = (char **)calloc(sizeof(char *) , len + 1);
+
 		if (!memory)
 			return (NULL);
 	}
@@ -61,26 +62,27 @@ char	**ft_split(char const *s, char c)
 			j = i;
 			while (s[i] != c && s[i] != 0)
 				i++;
-			if (s[i] == c && i <= (int)ft_strlen(s))
+			if ((s[i] == c || s[i] == 0) && i <= (int)ft_strlen(s))
 			{
 				*memory = ft_substr(s, j, i - j);
 				memory++;
+				if (s[i] == 0)
+					break ;
 				i++;
 			}
 		}
 		else
 			i++;
 	}
-	*(memory + len) = 0;
 	return (memory);
 }
-/*
+
 int main ()
 {
 	char	**word;
 	char str[] = "hello world jhdfj jhdejw ";
 
 	word = ft_split(str, ' ');
-	printf("first word = %s\n", *word);
+	printf("first word = %s\n", word[1]);
 }
-*/
+

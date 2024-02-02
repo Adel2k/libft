@@ -6,7 +6,7 @@
 /*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:45:21 by adel              #+#    #+#             */
-/*   Updated: 2024/01/29 15:53:11 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/01/31 00:12:06 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,19 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (*str == (unsigned char)c)
 			return (str);
-		if (*str == '\0')
-			break ;
-		str++;
+		else
+			str++;
 	}
 	return (NULL);
 }
 /*
 int main()
 {
-	const char s[] = "adel ? ka";
-	const char ch = '?';
-	char *ret = ft_memchr(s, ch , 9);
+	char s[] = {0, 1, 2 ,3 ,4 ,5};
+	char *ret = memchr(s, 2 , 3);
 	printf("%s", ret);
 }
+:w
 
 int main () {
    const char str[] = "http://www.tutorialspoint.com";
