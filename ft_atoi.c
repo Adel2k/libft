@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 20:39:19 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/31 00:18:42 by adel             ###   ########.fr       */
+/*   Updated: 2024/02/04 14:35:30 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ int	ft_atoi(const char *str)
 int main ()
 {
 	char str[] = " ";
-	printf("%d\n", atoi("01"));
+	printf("%d\n", atoi("          - 01"));
 }*/

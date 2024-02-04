@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:48:52 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/30 20:43:46 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/02/02 18:12:20 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	int		i;
 
 	i = 0;
+	if ((src == NULL || dst == NULL) && dstsize == 0)
+		return (0);
 	len_dest = ft_strlen(dst);
 	len_src = ft_strlen(src);
-	if (dstsize == 0)
-		return (len_src);
 	if (len_dest >= dstsize)
 		return (dstsize + len_src);
 	while (src[i] && (len_dest + i < dstsize - 1))

@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 12:50:13 by aeminian          #+#    #+#             */
-/*   Updated: 2024/02/02 00:36:30 by adel             ###   ########.fr       */
+/*   Updated: 2024/02/04 19:46:40 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,24 +37,14 @@ static size_t	word_count(const char *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+char static	**split(char **memory, char const *s, char c)
 {
-	char	**memory;
-	size_t	len;
-	int		j;
 	int		i;
+	int		j;
+	char	**temp;
 
 	i = 0;
-	if (!s)
-		return (NULL);
-	len = word_count(s, c);
-	if (s && *s && c)
-	{
-		memory = (char **)calloc(sizeof(char *) , len + 1);
-
-		if (!memory)
-			return (NULL);
-	}
+	temp = memory;
 	while (s[i] != 0)
 	{
 		if (s[i] != c)
@@ -66,23 +56,40 @@ char	**ft_split(char const *s, char c)
 			{
 				*memory = ft_substr(s, j, i - j);
 				memory++;
-				if (s[i] == 0)
-					break ;
 				i++;
+				printf("mem = %p\n", *memory);
 			}
 		}
 		else
 			i++;
 	}
-	return (memory);
+	*memory = NULL;
+	return (temp);
 }
 
+char	**ft_split(char const *s, char c)
+{
+	char	**memory;
+
+	if (!s)
+		return (NULL);
+	memory = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
+	if (!memory)
+		return (NULL);
+	return (split(memory, s, c));
+}
 int main ()
 {
-	char	**word;
-	char str[] = "hello world jhdfj jhdejw ";
+	int i;
+	i = 0;
+	char **result;
+	char str[] = "aa bb gggg djhjh ";
+	result = ft_split(str, ' ');
 
-	word = ft_split(str, ' ');
-	printf("first word = %s\n", word[1]);
+	while (result && result[i])
+	{
+		printf("'%s'\n", result[i]);
+		i++;
+	}
 }
 

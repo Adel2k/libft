@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adel <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/28 19:49:36 by adel              #+#    #+#             */
-/*   Updated: 2024/01/19 22:04:03 by aeminian         ###   ########.fr       */
+/*   Created: 2024/02/04 15:17:28 by aeminian          #+#    #+#             */
+/*   Updated: 2024/02/04 15:48:09 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if (s == NULL || f == NULL)
-		return;
-	while(*s != '\0')
+	t_list	*current;
+	t_list	*temp;
+
+	if (!lst || !del)
+		return ;
+	current = *lst;
+	while (current != NULL)
 	{
-		f(s);
-		*s++;
+		temp = current;
+		current = current->next;
+		del(temp->content);
+		free(temp);
 	}
-
+	*lst = NULL;
 }
-/*
-#include<ctype.h>
-
-int main()
-{
-	char art[] = "Artur";
-	printf("%s",ft_striter(art,toupper));
-}
-*/
