@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 12:50:13 by aeminian          #+#    #+#             */
-/*   Updated: 2024/02/05 16:27:42 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/02/05 22:10:13 by adel             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static size_t	word_count(const char *s, char c)
 	return (count);
 }
 
-char static	**split(char **memory, char const *s, char c)
+static char	**split(char **memory, char const *s, char c)
 {
 	int		i;
 	int		j;
