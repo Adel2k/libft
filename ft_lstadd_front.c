@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 17:12:42 by aeminian          #+#    #+#             */
-/*   Updated: 2024/02/05 14:20:11 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/02/05 20:13:42 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,20 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 /*
-int main ()
+void print(t_list *lst)
 {
-	t_list **head;
-	t_list *node1;
-	t_list new;
-	
-	*head = node1;
-	new.content = "13";
-	new.next = NULL;
-	node1->content = "42";
-	while (*head)
+	while(lst)
 	{
-		*head = ft_lstadd_front(head , node1);
-		printf("%d\n", head->content);
-		*head = head -> next;
+		printf("%s\n", lst->content);
+		lst = lst->next;
 	}
-	
+}
+int main() 
+{
+	t_list *lst;
+	lst = ft_lstnew("adel");
+	lst ->next = ft_lstnew("hello");
+	ft_lstadd_front(&lst, ft_lstnew("wow"));
+
+	print(lst);
 }*/
