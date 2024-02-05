@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 16:06:34 by aeminian          #+#    #+#             */
-/*   Updated: 2024/01/29 15:51:08 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/02/05 16:32:13 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ t_list	*ft_lstnew(void *content)
 /*
 int main ()
 {
-	char a[] = "aaaaaaa";
-	printf("%s", ft_lstnew(a)->content);
+	printf("%s", ft_lstnew("42")->content);
 }*/

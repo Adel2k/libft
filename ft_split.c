@@ -6,7 +6,7 @@
 /*   By: aeminian <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 12:50:13 by aeminian          #+#    #+#             */
-/*   Updated: 2024/02/04 19:46:40 by aeminian         ###   ########.fr       */
+/*   Updated: 2024/02/05 16:27:42 by aeminian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,26 +45,24 @@ char static	**split(char **memory, char const *s, char c)
 
 	i = 0;
 	temp = memory;
-	while (s[i] != 0)
+	while (s[i] != '\0' )
 	{
 		if (s[i] != c)
 		{
 			j = i;
-			while (s[i] != c && s[i] != 0)
+			while (s[i] != c && s[i] != '\0')
 				i++;
-			if ((s[i] == c || s[i] == 0) && i <= (int)ft_strlen(s))
+			if ((s[i] == c || s[i] == '\0'))
 			{
-				*memory = ft_substr(s, j, i - j);
-				memory++;
-				i++;
-				printf("mem = %p\n", *memory);
+				*temp = ft_substr(s, j, i - j);
+				temp++;
 			}
 		}
 		else
 			i++;
 	}
-	*memory = NULL;
-	return (temp);
+	*temp = 0;
+	return (memory);
 }
 
 char	**ft_split(char const *s, char c)
@@ -78,18 +76,20 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (split(memory, s, c));
 }
+/*
 int main ()
 {
 	int i;
 	i = 0;
 	char **result;
-	char str[] = "aa bb gggg djhjh ";
+	char *str = "loremisus. Suspendisse";
 	result = ft_split(str, ' ');
 
 	while (result && result[i])
 	{
-		printf("'%s'\n", result[i]);
+		printf("%s\n", result[i]);
+//		printf("%lu\n", ft_strlen(result[i]));
 		i++;
 	}
 }
-
+*/
