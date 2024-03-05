@@ -17,6 +17,11 @@ The motivation behind creating this library is to deepen understanding of fundam
 2. Navigate to the `libft` directory:
 3. Compile the library:
 
+## Testers
+- https://github.com/Tripouille/libftTester.git
+- https://github.com/xicodomingues/francinette.git
+- https://github.com/0x050f/libft-war-machine.git
+
 ## Usage
 - To use this library in your projects, simply include the `libft.h` header file in your source files and link against the compiled library (`libft.a`).
 - Example usage:
